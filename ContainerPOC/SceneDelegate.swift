@@ -3,7 +3,6 @@
 //  ContainerPOC
 //
 //  Created by Matthew Ferguson on 9/12/20.
-//  Copyright © 2020 MobileSandbox LLC. All rights reserved.
 //
 
 import UIKit
