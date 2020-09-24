@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		564929C6251C2D2E00853EF7 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564929C5251C2D2E00853EF7 /* CustomCell.swift */; };
 		56B920BA250DD97300793174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B920B9250DD97300793174 /* AppDelegate.swift */; };
 		56B920BC250DD97300793174 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B920BB250DD97300793174 /* SceneDelegate.swift */; };
 		56B920BE250DD97300793174 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56B920BD250DD97300793174 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		564929C5251C2D2E00853EF7 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		56B920B6250DD97300793174 /* ContainerPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContainerPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B920B9250DD97300793174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56B920BB250DD97300793174 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 			children = (
 				56B920D2250DDABC00793174 /* MA.storyboard */,
 				56B920D1250DDABC00793174 /* MAVC.swift */,
+				564929C5251C2D2E00853EF7 /* CustomCell.swift */,
 			);
 			path = MA;
 			sourceTree = "<group>";
@@ -108,7 +111,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "MobileSandbox LLC";
 				TargetAttributes = {
 					56B920B5250DD97300793174 = {
@@ -155,6 +158,7 @@
 			files = (
 				56B920D3250DDABC00793174 /* MAVC.swift in Sources */,
 				56B920BE250DD97300793174 /* ViewController.swift in Sources */,
+				564929C6251C2D2E00853EF7 /* CustomCell.swift in Sources */,
 				56B920BA250DD97300793174 /* AppDelegate.swift in Sources */,
 				56B920BC250DD97300793174 /* SceneDelegate.swift in Sources */,
 			);
@@ -208,6 +212,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -268,6 +273,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

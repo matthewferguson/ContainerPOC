@@ -18,7 +18,6 @@ class MAVC: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
         self.collection?.isHidden = true
     }
 
@@ -27,6 +26,7 @@ class MAVC: UIViewController {
         
         let delay = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: delay) {
+            
             self.collection?.isHidden = false
             self.collection?.reloadData()
             
@@ -51,6 +51,7 @@ class MAVC: UIViewController {
 
 extension MAVC: UICollectionViewDataSource {
     
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -59,22 +60,18 @@ extension MAVC: UICollectionViewDataSource {
         return dataSource.count
     }
 
-    
-    
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         
-         print("indexPath.row == \(indexPath.row)")
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Account_Cell",for: indexPath) as! UICollectionViewCell
-        
-        let ds = dataSource[indexPath.row]
-        
         print("indexPath.row == \(indexPath.row)")
-    
-  
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Account_Cell",for: indexPath) as! CustomCell
+        
+        let specificName = dataSource[indexPath.row]
+        cell.name?.text = specificName
+        
         return cell
     }
+    
 }
 
 
@@ -86,9 +83,7 @@ extension MAVC: UICollectionViewDelegate
     {
         print("indexPath.item = \(indexPath.item)")
         print("indexPath.section = \(indexPath.section)")
-        print(indexPath.section)
-        print("@@@@@@@@@ indexPath.section ")
         let ds = dataSource[indexPath.item]
-    
+        print("dataSource == \(ds)")
     }
 }
