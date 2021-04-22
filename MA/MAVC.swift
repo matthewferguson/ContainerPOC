@@ -15,42 +15,24 @@ class MAVC: UIViewController {
     
     //MARK:- Life Cycle
     
-    override func viewDidLoad()
-    {
+    override func viewDidLoad() {
         super.viewDidLoad()
         self.collection?.isHidden = true
     }
 
-    
     override func viewWillAppear(_ animated: Bool) {
-        
-        let delay = DispatchTime.now() + .seconds(1)
+        let delay = DispatchTime.now() + .seconds(5)
         DispatchQueue.main.asyncAfter(deadline: delay) {
-            
             self.collection?.isHidden = false
             self.collection?.reloadData()
-            
         }
-        
     }
-    
-    
-    override func viewDidAppear(_ animated: Bool) {
-
-    }
-    
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        
-    }
-
-    
 }
 
 
+//MARK:- extend collection view data source
 
 extension MAVC: UICollectionViewDataSource {
-    
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -60,30 +42,23 @@ extension MAVC: UICollectionViewDataSource {
         return dataSource.count
     }
 
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
-        
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         print("indexPath.row == \(indexPath.row)")
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Account_Cell",for: indexPath) as! CustomCell
-        
         let specificName = dataSource[indexPath.row]
         cell.name?.text = specificName
-        
         return cell
     }
     
 }
 
+//MARK:- extend collection view delegate
 
-
-
-extension MAVC: UICollectionViewDelegate
-{
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
-    {
+extension MAVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("indexPath.item = \(indexPath.item)")
         print("indexPath.section = \(indexPath.section)")
         let ds = dataSource[indexPath.item]
-        print("dataSource == \(ds)")
+        print("dataSource item selected == \(ds)")
     }
 }
