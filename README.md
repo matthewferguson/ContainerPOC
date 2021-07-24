@@ -1,6 +1,6 @@
 # ContainerPOC
 
-keywords: UIKit, UIContainerView, UICollectionView, Storyboard, iOS SDK 14, 
+keywords: UIKit, UIContainerView, ContainerView, Container View, CollectionView, Collection View, UICollectionView, Storyboard, iOS SDK 14, 
 
 Proof of Concept (or R&D training excercise) to test out the use of Swift 4/5 and Swift Storyboard Container Views.  This project uses Interface Builder Storyboards, embeds View Controllers within the Container View using storyboard references, and utilizes horizontal AutoLayout. Basically, this project shows you how to embed a module that is a swift collection view. Embedded in such a manner that a developer can be assigned a change request and never has to touch or alter the main view.  Only develop for the collection view that is embedded. We basically seperate and decouple using Container Views.  In a way this concept is the grandfather to horizontal/vertical autolayout stack views. 
 
